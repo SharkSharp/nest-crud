@@ -1,8 +1,12 @@
 {
   "name": "@arthurfred/nest-crud",
-  "version": "0.6.1",
+  "version": "0.6.15",
   "description": "Auto CRUD for nestjs",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*",
+    "*.md"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -14,7 +18,7 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
-  "dependencies": {
+  "devDependencies": {
     "@automapper/classes": "^8.7.7",
     "@automapper/core": "^8.7.7",
     "@automapper/nestjs": "^8.7.7",
@@ -30,6 +34,12 @@
     "rxjs": "^7.2.0",
     "typeorm": "0.3.11",
     "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^9.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",

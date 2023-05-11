@@ -1,12 +1,12 @@
-import { createMap, Mapper } from '@automapper/core';
-import { AutomapperProfile, InjectMapper } from '@automapper/nestjs';
-import { IDtoRecipe } from '@Interfaces/i-dto-recipe.interface';
-import { Injectable, Type } from '@nestjs/common';
+import { createMap, Mapper } from "@automapper/core";
+import { AutomapperProfile, InjectMapper } from "@automapper/nestjs";
+import { IDtoRecipe } from "@Interfaces/i-dto-recipe.interface";
+import { Injectable, Type } from "@nestjs/common";
 
 export function crudProfileFor<Entity>(
   target: Type<Entity>,
-  { createDto, returnDto }: IDtoRecipe,
-) {
+  { createDto, returnDto }: IDtoRecipe
+): any {
   @Injectable()
   class CrudProfile extends AutomapperProfile {
     constructor(@InjectMapper() mapper: Mapper) {

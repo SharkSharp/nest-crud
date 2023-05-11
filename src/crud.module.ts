@@ -128,11 +128,6 @@ export class CrudModule {
     return crudRepositoryFor<Entity>(target);
   }
 
-  public static crudProfileFor<Entity>(target: Type<Entity>) {
-    this.autoload([target]);
-    return crudProfileFor<Entity>(target, this.recipeFor(target).dtoRecipe);
-  }
-
   private static autoload(entities: Array<Type<any>>) {
     logger.log(`Starting ${entities.map((x) => x.name).join(",")} Autoload`);
 

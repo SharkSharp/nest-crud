@@ -1,6 +1,6 @@
 {
   "name": "@arthurfred/nest-crud",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Auto CRUD for nestjs",
   "main": "index.js",
   "scripts": {

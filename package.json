@@ -1,0 +1,57 @@
+{
+  "name": "@arthurfred/nest-crud",
+  "version": "0.6.0",
+  "description": "Auto CRUD for nestjs",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "dependencies": {
+    "@automapper/classes": "^8.7.7",
+    "@automapper/core": "^8.7.7",
+    "@automapper/nestjs": "^8.7.7",
+    "@nestjs/common": "^9.0.0",
+    "@nestjs/graphql": "^11.0.5",
+    "@nestjs/swagger": "^6.3.0",
+    "@nestjs/typeorm": "^9.0.1",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^16.11.10",
+    "change-case": "^4.1.2",
+    "lodash": "^4.17.21",
+    "rimraf": "^3.0.2",
+    "rxjs": "^7.2.0",
+    "typeorm": "0.3.11",
+    "typescript": "^5.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SharkSharp/nest-crud.git"
+  },
+  "keywords": [
+    "nest",
+    "nestjs",
+    "crud",
+    "autocrud"
+  ],
+  "author": "Arthur Frederico Neves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SharkSharp/nest-crud/issues"
+  },
+  "homepage": "https://github.com/SharkSharp/nest-crud#readme",
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/../src/$1",
+    "^@Decorators/(.*)$": "<rootDir>/../src/decorators/$1",
+    "^@Interfaces/(.*)$": "<rootDir>/../src/interfaces/$1",
+    "^@Dtos/(.*)$": "<rootDir>/../src/dtos/$1",
+    "^@Helpers/(.*)$": "<rootDir>/../src/helpers/$1"
+  }
+}
